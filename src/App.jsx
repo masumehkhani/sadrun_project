@@ -1,8 +1,9 @@
-import Page404 from './components/404page/Page404';
+
+import ArticleCard from './components/Article-Card/ArticleCard'
 function App() {
   return (
     <>
-      <Page404/>
+      <ArticleCard/>
     </>
   )
 }
