@@ -8,6 +8,7 @@ function App() {
       <ArticleCard/>
       <ArticleCards/>
       <ArticleNews/>
+      <ArticleCard/>
     </>
   )
 }
