@@ -1,14 +1,15 @@
 
 import ArticleNews from './components/Article&News/ArticleNews'
-import ArticleCard from './components/Article-Card/ArticleCard'
-import ArticleCards from './components/Article-Cards/ArticleCards'
+import ArticlesNewsSection from './components/Article&News/ArticlesNewsSection/ArticlesNewsSection'
+import ArticleCard from './components/ArticleCard/ArticleCard'
+
 function App() {
   return (
     <>
-      <ArticleCard/>
-      <ArticleCards/>
+    
       <ArticleNews/>
       <ArticleCard/>
+      <ArticlesNewsSection/>
     </>
   )
 }

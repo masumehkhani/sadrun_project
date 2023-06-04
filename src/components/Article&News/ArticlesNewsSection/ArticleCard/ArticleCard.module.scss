@@ -1,0 +1,33 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/media.scss";
+@import '../../sass/fonts.scss';
+
+
+.CourseArticleCard {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .CourseArticleImage {
+    margin: 10px;
+    width: 100px;
+    border-radius: 15px;
+    overflow: hidden;
+    transform: scale(1.05);
+    transition: all 0.5s;
+  }
+  
+  .CourseArticleImage img {
+    width: 100%;
+  }
+  .CourseArticleNews {
+    padding: 0 1rem 0 2rem;
+    @include typography($primary-font-family, 1rem, $primary-txt-color, !important);
+    @include max-width(small) {
+      font-size: 14px;
+      gap: 20px;
+    }
+  }
+  
