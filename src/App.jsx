@@ -1,11 +1,11 @@
-import ArticlesNewsSection from "./components/Article&News/ArticlesNewsSection/ArticlesNewsSection"
+import ArticleNews from "./components/Article&News/ArticleNews"
 
 
 
 function App() {
   return (
     <>
-    <ArticlesNewsSection/>
+    <ArticleNews/>
     </>
   )
 }
