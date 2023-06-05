@@ -4,21 +4,17 @@
 @import "../../../sass/media.scss";
 @import '../../../sass/fonts.scss';
 
-.container {
+ .ArticleNewsContainer{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 0 20px;
-  }
-  .articlesNewsTitleContainer{
-    align-self: flex-start;
+    padding: 1rem 2rem;
   }
   .articlesNewsTitle {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    @include typography($primary-font-family, 15px, #434343);
+   
     box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.16);
     border-radius: 14px;
     background: #ffff;
@@ -26,10 +22,23 @@
     height: 6%;
     min-width: 86px;
     min-height: 50px;
+    .articlesNewsTitleText{
+      @include typography($primary-font-family, 24px, #434343);
+      @include max-width(large) {
+        font-size: 20px;
+      }
+      @include max-width(medium) {
+        font-size: 18px;
+      }
+      @include max-width(small) {
+        font-size: 16px;
+      }
+    }
   }
-  
+ 
   .articlesNewsSection {
     align-self: flex-start;
+    width: 100%;
     & > div:nth-child(1),
     & > div:nth-child(2) {
         border-bottom: 1px solid $primary-txt-color;
@@ -38,7 +47,8 @@
   }
 
   .articlesNewsBtnContainer {
-    align-self: flex-end;
+    display: flex;
+    justify-content: end;
   }
   
   .articlesNewsBtn {
@@ -48,10 +58,10 @@
     cursor: pointer;
     background-color: #ffff;
     transition: all 0.3s;
-    @include typography($primary-font-family, 15px, #5a0ba9);
+    @include typography($primary-font-family, 15px, $text-accent-color);
     @include max-width(small) {
       padding: 7px 18px;
-      @include typography($primary-font-family, 13px, #5a0ba9);
+      font-size: 13px;
     }
   
     &:hover {
