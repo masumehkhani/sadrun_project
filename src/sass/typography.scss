@@ -1,0 +1,160 @@
+// تعریف مقادیر breakpoint
+$breakpoint-xsmall: 320px;
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+$breakpoint-extra-large: 1300px;
+
+// میکسین برای استفاده از مقادیر breakpoint
+@mixin max-width($breakpoint) {
+  @if $breakpoint == x-small {
+    @media (max-width: $breakpoint-xsmall) {
+      @content;
+    }
+  } @else if $breakpoint == small {
+    @media (max-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (max-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (max-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if $breakpoint == x-large {
+    @media (max-width: $breakpoint-extra-large) {
+      @content;
+    }
+  } @else {
+    @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
+  }
+}
+
+// تعریف تایپوگرافی برای تگ های p و h1-h6 با استفاده از میکسین
+p {
+  @include max-width(x-small) {
+    font-size: 12px;
+  }
+  @include max-width(small) {
+    font-size: 14px;
+  }
+  @include max-width(medium) {
+    font-size: 16px;
+  }
+  @include max-width(large) {
+    font-size: 18px;
+  }
+  @include max-width(x-large) {
+    font-size: 20px;
+  }
+}
+
+h1 {
+  @include max-width(x-small) {
+    font-size: 24px;
+  }
+  @include max-width(small) {
+    font-size: 28px;
+  }
+  @include max-width(medium) {
+    font-size: 32px;
+  }
+  @include max-width(large) {
+    font-size: 36px;
+  }
+  @include max-width(x-large) {
+    font-size: 40px;
+  }
+}
+
+h2 {
+  @include max-width(x-small) {
+    font-size: 20px;
+  }
+  @include max-width(small) {
+    font-size: 24px;
+  }
+  @include max-width(medium) {
+    font-size: 28px;
+  }
+  @include max-width(large) {
+    font-size: 32px;
+  }
+  @include max-width(x-large) {
+    font-size: 36px;
+  }
+}
+
+h3 {
+  @include max-width(x-small) {
+    font-size: 18px;
+  }
+  @include max-width(small) {
+    font-size: 20px;
+  }
+  @include max-width(medium) {
+    font-size: 24px;
+  }
+  @include max-width(large) {
+    font-size: 28px;
+  }
+  @include max-width(x-large) {
+    font-size: 32px;
+  }
+}
+
+h4 {
+  @include max-width(x-small) {
+    font-size: 16px;
+  }
+  @include max-width(small) {
+    font-size: 18px;
+  }
+  @include max-width(medium) {
+    font-size: 20px;
+  }
+  @include max-width(large) {
+    font-size: 24px;
+  }
+  @include max-width(x-large) {
+    font-size: 28px;
+  }
+}
+
+h5 {
+  @include max-width(x-small) {
+    font-size: 14px;
+  }
+  @include max-width(small) {
+    font-size: 16px;
+  }
+  @include max-width(medium) {
+    font-size: 18px;
+  }
+  @include max-width(large) {
+    font-size: 20px;
+  }
+  @include max-width(x-large) {
+    font-size: 24px;
+  }
+}
+
+h6 {
+  @include max-width(x-small) {
+    font-size: 12px;
+  }
+  @include max-width(small) {
+    font-size: 14px;
+  }
+  @include max-width(medium) {
+    font-size: 16px;
+  }
+  @include max-width(large) {
+    font-size: 18px;
+  }
+  @include max-width(x-large) {
+    font-size: 20px;
+  }
+}
