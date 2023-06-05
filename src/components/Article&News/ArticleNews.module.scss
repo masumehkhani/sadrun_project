@@ -1,0 +1,130 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/media.scss";
+@import '../../sass/fonts.scss';
+@import '../../sass/typography.scss';
+
+
+.ArticleNewsContainer {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+ 
+  .ArticleNewsHeading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    // width:100% ;
+  }
+  
+  .title {
+    width: 100%;
+    max-width: 490px;
+    height: 120px;
+    box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+
+    @include max-width(medium) {
+      width: 380px;
+      height: 100px;
+    }
+    @include max-width(small) {
+      width: 300px;
+      height: 80px;
+    }
+  }
+  
+  .title h1{
+    font-weight: bold;
+    @include typography($primary-font-family, 40px, $text-accent-color);
+    @include max-width(large) {
+      font-size: 36px;
+    }
+    @include max-width(medium) {
+      font-size: 32px;
+    }
+    @include max-width(small) {
+      font-size: 20px;
+    }
+  
+  }
+ 
+  .boyPic,
+  .girlPic {
+    position: relative;
+    top: 30px;
+    @include max-width(medium) {
+      display: none;
+    }
+  }
+  
+  .girlPicImg,
+  .boyPicImg {
+    height: 180px;
+  }
+
+  .ContentWrapper {
+    display: grid;
+    width: 100%;
+    gap: 40px;
+    padding: 40px;
+
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 768px) {
+  
+        grid-template-columns: 1fr;
+        &> :nth-child(2){
+          display: none;
+        }
+        
+    }
+    
+  }
+.ArticleNewsItem{
+  box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.16);
+  // margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
+  .NewsletterSection{
+    margin-top:45px ;
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .newsletterSubscription {
+    width: 490px;
+    height: 70px;
+    border-radius: 21px;
+    border: 1px solid #8e8d8d;
+    outline: none;
+    padding-right: 50px;
+    @include typography($primary-font-family, 20px, #67008f);
+    
+    @include max-width(medium) {
+      width: 380px;
+      height: 60px;
+    }
+    @include max-width(small){
+      width: 300px;
+      height: 60px;
+    @include typography($primary-font-family, 14px, #67008f);
+  
+    }
+  }
+  .newsletterSubscription::placeholder {
+    @include typography($primary-font-family, 17px, #67008f);
+    @include max-width(small){
+    @include typography($primary-font-family, 14px, #67008f);
+  
+    }
+  }
+  .newsletterSubscription:focus {
+    border: 2px solid #5a0ba9;
+  }
+  
