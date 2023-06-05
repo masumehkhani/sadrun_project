@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    width: 100%;
   }
   
   .CourseArticleImage {
@@ -24,10 +25,19 @@
   }
   .CourseArticleNews {
     padding: 0 1rem 0 2rem;
-    @include typography($primary-font-family, 1rem, $primary-txt-color, !important);
-    @include max-width(small) {
-      font-size: 14px;
+    @include typography($primary-font-family, 1.6rem, $primary-txt-color);
+    @include max-width(large) {
+      font-size: 1.4rem;
       gap: 20px;
     }
+    @include max-width(medium) {
+      font-size: 1.2rem;
+      gap: 20px;
+    }
+    @include max-width(small) {
+      font-size: 1rem;
+      gap: 20px;
+    }
+   
   }
   
