@@ -1,11 +1,10 @@
-import ArticleNews from "./components/Article&News/ArticleNews"
 
 
-
+import QA from './components/Q&A/QA'
 function App() {
   return (
     <>
-    <ArticleNews/>
+    <QA/>
     </>
   )
 }
